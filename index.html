@@ -26,7 +26,7 @@ document.getElementById("removeFile").addEventListener("click", removeFile);
 $archivo=$GET['file'];
   $content=$GET['contenido'];
 
-   function createFile() {
+  /* function createFile() {
    var type = window.TEMPORARY;
    var size = 5*1024*1024;
   window.requestFileSystem(type, size, successCallback, errorCallback)
@@ -41,7 +41,7 @@ $archivo=$GET['file'];
       alert("ERROR1: " + error.code)
    }
 	
-}
+}*/
       function writeFile() {
    var type = window.TEMPORARY;
    var size = 5*1024*1024;
