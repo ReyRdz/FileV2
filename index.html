@@ -58,8 +58,9 @@ $archivo=$GET['file'];
             fileWriter.onerror = function(e) {
                alert('Write failed: ' + e.toString());
             };
-	    var tex = textarea.getData(); 
-            var blob = new Blob([text], {type: 'text/plain'});
+	    var text = $('textarea').val();
+	   // var tex = textarea.getData(); 
+            var blob = new Blob([$('textarea').val()], {type: 'text/plain'});
             fileWriter.write(blob);
          }, errorCallback);
       }, errorCallback);
