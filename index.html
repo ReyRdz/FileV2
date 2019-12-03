@@ -66,7 +66,7 @@ $archivo=$GET['file'];
    }
 
    function errorCallback(error) {
-      alert("ERROR2: " + error.code)
+      alert("No escrito")
    }
 }
       function readFile() {
@@ -90,7 +90,7 @@ $archivo=$GET['file'];
    }
 
    function errorCallback(error) {
-      alert("ERROR3: " + error.code)
+      alert("Archivo no encontrado")
    }
 }
       function removeFile() {
@@ -108,7 +108,7 @@ $archivo=$GET['file'];
    }
 
    function errorCallback(error) {
-      alert("ERROR4: " + error.code)
+      alert("No Eliminado")
    }
 }
       
@@ -118,9 +118,9 @@ $archivo=$GET['file'];
   <body onload="onBodyLoad()">
     <h1>Example</h1>
 <form action="index.html" method="get">
-      <input for type="text"  required placeholder="Ingresa el nombre de tu archivo" name="file"><br><br>
+<!--<input for type="text"  required placeholder="Ingresa el nombre de tu archivo" name="file"><br><br>
   <input id="createFile" type="button" value="CREATE FILE">
-    </form>
+    </form> -->
 
 <button id = "writeFile">WRITE FILE</button>
 <button id = "readFile">READ FILE</button>
