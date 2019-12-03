@@ -58,13 +58,15 @@ $archivo=$GET['file'];
             fileWriter.onerror = function(e) {
                alert('Write failed: ' + e.toString());
             };
-
-            var blob = new Blob(['practica practica practica'], {type: 'text/plain'});
+	    var tex = textarea.getData(); 
+            var blob = new Blob([text], {type: 'text/plain'});
             fileWriter.write(blob);
          }, errorCallback);
       }, errorCallback);
    }
 
+	      
+	      
    function errorCallback(error) {
       alert("No escrito")
    }
