@@ -26,7 +26,7 @@ document.getElementById("removeFile").addEventListener("click", removeFile);
 $archivo=$GET['file'];
   $content=$GET['contenido'];
 
-  /* function createFile() {
+   function createFile() {
    var type = window.TEMPORARY;
    var size = 5*1024*1024;
   window.requestFileSystem(type, size, successCallback, errorCallback)
@@ -41,7 +41,7 @@ $archivo=$GET['file'];
       alert("ERROR1: " + error.code)
    }
 	
-}*/
+}
       function writeFile() {
    var type = window.TEMPORARY;
    var size = 5*1024*1024;
@@ -118,9 +118,9 @@ $archivo=$GET['file'];
   <body onload="onBodyLoad()">
     <h1>Example</h1>
 <form action="index.html" method="get">
-<!--<input for type="text"  required placeholder="Ingresa el nombre de tu archivo" name="file"><br><br>
+<input for type="text"  required placeholder="Ingresa el nombre de tu archivo" name="file"><br><br>
   <input id="createFile" type="button" value="CREATE FILE">
-    </form> -->
+    </form>
 
 <button id = "writeFile">WRITE FILE</button>
 <button id = "readFile">READ FILE</button>
