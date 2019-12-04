@@ -41,7 +41,7 @@ $content=$GET['contenido'];
       fs.root.getFile('practica.txt', {create: true}, function(fileEntry) {
          fileEntry.createWriter(function(fileWriter) {
             fileWriter.onwriteend = function(e) {
-               alert('Escrito Completo' + fileEntry.metadata.modificationTime);
+               alert('Escrito Completo');
             };
 		
             fileWriter.onerror = function(e) {alert('Error de escritura ' + e.toString());};
