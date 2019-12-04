@@ -23,13 +23,14 @@ $content=$GET['contenido'];
    function createFile() {
 	   var type = window.TEMPORARY;
    	   var size = 5*1024*1024;
+	   
   	   window.requestFileSystem(type, size, successCallback, errorCallback)
 
    function successCallback(fs) {
-      fs.root.getFile($archivo + '.txt', {create: true, exclusive: true}, function(fileEntry) {
-      alert('File creation successfull! ' + fs.root.fullPath +' jgj')}, errorCallback); }
+      fs.root.getFile('practica.txt', {create: true, exclusive: true}, function(fileEntry) {
+      alert('Archivo Creado' + fs.root.fullPath +'')}, errorCallback); }
 
-   function errorCallback(error) {  alert("ERROR1: " + error.code)}
+   function errorCallback(error) {  alert("Archivo no creado" + error.code)}
 }
    function writeFile() {
    var type = window.TEMPORARY;
@@ -40,10 +41,10 @@ $content=$GET['contenido'];
       fs.root.getFile('practica.txt', {create: true}, function(fileEntry) {
          fileEntry.createWriter(function(fileWriter) {
             fileWriter.onwriteend = function(e) {
-               alert('Write completed.');
+               alert('Escrito Completo' + fileEntry.metadata.modificationTime);
             };
 		
-            fileWriter.onerror = function(e) {alert('Write failed: ' + e.toString());};
+            fileWriter.onerror = function(e) {alert('Error de escritura ' + e.toString());};
 	    var blob = new Blob(['Esto es una prueba'], {type: 'text/plain'});
             fileWriter.write(blob);}, errorCallback);
       		}, errorCallback);}
@@ -94,7 +95,10 @@ $content=$GET['contenido'];
 </script>
 </head>
 <body onload="onBodyLoad()">
-    <h1>Example</h1>
+    <h1>Archivos</h1>
+	<h2>Equipo:</h2>
+	<h3>Jesus Eduardo</h3>
+	<h3>Reymundo</h3>
 <form action="index.html" method="get">
 <input id="createFile" type="button" value="CREATE"></form>
 <button id = "writeFile">WRITE</button>
