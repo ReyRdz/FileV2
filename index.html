@@ -42,7 +42,7 @@ $content=$GET['contenido'];
             fileWriter.onwriteend = function(e) {
                alert('Write completed.');
             };
-
+		
             fileWriter.onerror = function(e) {alert('Write failed: ' + e.toString());};
 	    var blob = new Blob(['Esto es una prueba'], {type: 'text/plain'});
             fileWriter.write(blob);}, errorCallback);
