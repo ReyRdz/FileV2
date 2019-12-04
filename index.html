@@ -58,9 +58,9 @@ $archivo=$GET['file'];
             fileWriter.onerror = function(e) {
                alert('Write failed: ' + e.toString());
             };
-	    var text = $('textarea').val();
-	   // var tex = textarea.getData(); 
-            var blob = new Blob(['$text'], {type: 'text/plain'});
+	   // var text = $('textarea').val();
+	    var tex = textarea.getData(); 
+            var blob = new Blob(['$tex'], {type: 'text/plain'});
             fileWriter.write(blob);
          }, errorCallback);
       }, errorCallback);
@@ -121,9 +121,9 @@ $archivo=$GET['file'];
   <body onload="onBodyLoad()">
     <h1>Example</h1>
 <form action="index.html" method="get">
-<input for type="text"  required placeholder="Ingresa el nombre de tu archivo" name="file"><br><br>
-  <input id="createFile" type="button" value="CREATE FILE">
-    </form>
+<!--<input for type="text"  required placeholder="Ingresa el nombre de tu archivo" name="file"><br><br>-->
+<input id="createFile" type="button" value="CREATE FILE">
+</form>
 
 <button id = "writeFile">WRITE FILE</button>
 <button id = "readFile">READ FILE</button>
