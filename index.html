@@ -60,7 +60,7 @@ $archivo=$GET['file'];
             };
 	    var text = $('textarea').val();
 	   // var tex = textarea.getData(); 
-            var blob = new Blob([$('textarea').val()], {type: 'text/plain'});
+            var blob = new Blob(['$text'], {type: 'text/plain'});
             fileWriter.write(blob);
          }, errorCallback);
       }, errorCallback);
